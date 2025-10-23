@@ -1,9 +1,11 @@
+import { resizeImage } from '../lib/resizeImage';
+
 export default function Item({ item }: { item: any }) {
   return (
     <div className="flex flex-col gap-1">
       <div className="h-25 relative flex items-center rounded-md bg-main-color shadow-box">
         <img
-          src={item.download_url}
+          src={resizeImage(item.download_url)}
           alt="이미지"
           className="w-full h-full object-contain"
         />
