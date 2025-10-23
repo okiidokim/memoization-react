@@ -1,6 +1,8 @@
+import React from 'react';
 import { resizeImage } from '../lib/resizeImage';
+import type ItemType from '../types/ItemType';
 
-export default function Item({ item }: { item: any }) {
+const ItemComponent = ({ item }: { item: ItemType }) => {
   return (
     <div className="flex flex-col gap-1">
       <div className="h-25 relative flex items-center rounded-md bg-main-color shadow-box">
@@ -17,4 +19,6 @@ export default function Item({ item }: { item: any }) {
       </span>
     </div>
   );
-}
+};
+
+export const Item = React.memo(ItemComponent);

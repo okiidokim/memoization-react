@@ -1,7 +1,7 @@
 import useList from '../hooks/useList';
 import useScroll from '../hooks/useScroll';
 import CenterText from './CenterText';
-import Item from './Item';
+import { Item } from './Item';
 
 export default function List() {
   const {
