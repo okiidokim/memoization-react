@@ -9,7 +9,7 @@ function App() {
         <header className="w-full bg-main-color py-7 font-bold text-[1.5rem] flex justify-center">
           메인 페이지
         </header>
-        <div className="flex flex-grow justify-center w-full p-4 md:p-6 overflow-y-auto">
+        <div className="flex flex-grow justify-center w-full overflow-hidden">
           <QueryClientProvider client={qc()}>
             <List />
           </QueryClientProvider>

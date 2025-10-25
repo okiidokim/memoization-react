@@ -6,7 +6,7 @@ export default function useList() {
   const listMethods = useInfiniteQuery({
     queryKey: ['list'],
     queryFn: async ({ pageParam = 0 }): Promise<ItemType[]> => {
-      const limit = pageParam === 0 ? 30 : 15;
+      const limit = 30;
       const response = await getList({ page: pageParam, limit });
       return response;
     },
